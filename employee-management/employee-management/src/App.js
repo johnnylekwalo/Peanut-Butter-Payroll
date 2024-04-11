@@ -5,6 +5,8 @@ import EmployeeList from "./components/EmployeeList";
 import EmployeeForm from "./components/EmployeeForm";
 import DeleteEmployee from "./components/DeleteEmployee";
 import {Button} from "@mui/material";
+import EmployeeTable from "./components/EmployeeTable";
+import EmployeeDetailForm from "./components/EmployeeDetailForm";
 
 const App = () => {
   const [employees, setEmployees] = useState([]);
@@ -30,17 +32,18 @@ const App = () => {
   return (
 
       <div>
-          <div>
-              <Button variant="contained">Hello Material-UI</Button>
-          </div>
-        <EmployeeForm onSubmit={handleAddEmployee} />
-        <EmployeeList employees={employees} />
+          <EmployeeForm onSubmit={handleAddEmployee} />
+          <h1>Current Employees</h1>
+          <EmployeeTable />
+          <EmployeeList employees={employees} />
         {employees.map(employee => (
             <div key={employee.id}>
               {employee.name}
               <DeleteEmployee employeeId={employee.id} onDelete={handleDeleteEmployee} />
             </div>
         ))}
+          <h1>Employee Information</h1>
+          <EmployeeDetailForm/>
       </div>
 
   );

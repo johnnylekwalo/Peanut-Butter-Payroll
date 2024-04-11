@@ -18,7 +18,9 @@ const EmployeeForm = ({ onSubmit }) => {
             value={name}
             onChange={(e) => setName(e.target.value)}
         />
-        <button type="submit">Submit</button>
+        {/*<button type="submit">Submit</button>*/}
+        <Button variant="contained" type="submit">Submit</Button>
+
       </form>
 
 
