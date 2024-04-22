@@ -138,14 +138,14 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\": \"Add your name in the body\"\n}",
+					"raw": "{\n  \"nodes\": [\n    {\n      \"id\": 0,\n      \"name\": \"Start\",\n      \"type\": \"START\"\n    },\n    {\n      \"id\": 1,\n      \"name\": \"A\",\n      \"type\": \"SERVICE_TASK\"\n    },\n    {\n      \"id\": 2,\n      \"name\": \"B\",\n      \"type\": \"HUMAN_TASK\"\n    },\n    {\n      \"id\": 3,\n      \"name\": \"G1\",\n      \"type\": \"GATEWAY\"\n    },\n    {\n      \"id\": 4,\n      \"name\": \"C\",\n      \"type\": \"HUMAN_TASK\"\n    },\n    {\n      \"id\": 5,\n      \"name\": \"D\",\n      \"type\": \"HUMAN_TASK\"\n    },\n    {\n      \"id\": 6,\n      \"name\": \"G2\",\n      \"type\": \"GATEWAY\"\n    },\n    {\n      \"id\": 7,\n      \"name\": \"#\",\n      \"type\": \"SERVICE_TASK\"\n    },\n    {\n      \"id\": 8,\n      \"name\": \"End\",\n      \"type\": \"END\"\n    }\n  ],\n  \"edges\": [\n    {\n      \"from\": 0,\n      \"to\": 1\n    },\n    {\n      \"from\": 1,\n      \"to\": 2\n    },\n    {\n      \"from\": 2,\n      \"to\": 3\n    },\n    {\n      \"from\": 3,\n      \"to\": 4\n    },\n    {\n      \"from\": 3,\n      \"to\": 5\n    },\n    {\n      \"from\": 4,\n      \"to\": 6\n    },\n    {\n      \"from\": 5,\n      \"to\": 6\n    },\n    {\n      \"from\": 6,\n      \"to\": 2\n    },\n    {\n      \"from\": 6,\n      \"to\": 7\n    },\n    {\n      \"from\": 7,\n      \"to\": 8\n    }\n  ]\n}\n",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "http://localhost:5000/api/employees",
+				"url": "http://localhost:8080/reduce",
 				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
 			},
 			"response": []
