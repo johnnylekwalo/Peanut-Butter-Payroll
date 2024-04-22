@@ -66,14 +66,14 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\": \"Add your name in the body\"\n}",
+					"raw": "{\n  \"nodes\": [\n    {\n      \"id\": 0,\n      \"name\": \"Start\",\n      \"type\": \"START\"\n    },\n    {\n      \"id\": 1,\n      \"name\": \"A\",\n      \"type\": \"HUMAN_TASK\"\n    },\n    {\n      \"id\": 2,\n      \"name\": \"B\",\n      \"type\": \"HUMAN_TASK\"\n    },\n    {\n      \"id\": 3,\n      \"name\": \"C\",\n      \"type\": \"SERVICE_TASK\"\n    },\n    {\n      \"id\": 4,\n      \"name\": \"D\",\n      \"type\": \"HUMAN_TASK\"\n    },\n    {\n      \"id\": 5,\n      \"name\": \"End\",\n      \"type\": \"END\"\n    }\n  ],\n  \"edges\": [\n    {\n      \"from\": 0,\n      \"to\": 1\n    },\n    {\n      \"from\": 1,\n      \"to\": 2\n    },\n    {\n      \"from\": 2,\n      \"to\": 3\n    },\n    {\n      \"from\": 3,\n      \"to\": 4\n    },\n    {\n      \"from\": 4,\n      \"to\": 5\n    }\n  ]\n}\n",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "http://localhost:5000/api/employees",
+				"url": "http://localhost:8080/reduce",
 				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
 			},
 			"response": []
